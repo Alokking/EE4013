@@ -1,0 +1,194 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+\usepackage{tikz-qtree}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage[T1]{fontenc}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+% \providecommand{\abs}[1]{\left\vert#1\right\vert}
+% \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+% %\providecommand{\norm}[1]{\lVert#1\rVert}
+% \providecommand{\mtx}[1]{\mathbf{#1}}
+% \providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{Alok Saroj - EE18BTECH11003}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all latex-tikz and C codes from 
+%
+\begin{lstlisting}
+https://github.com/Alokking/EE4013/blob/main/code
+\end{lstlisting}
+\begin{lstlisting}
+https://github.com/ipsingh85/EE4013/tree/main/Assingment_1/Assingment_1.tex
+\end{lstlisting}
+\section{Problem}
+(Q 18) Consider the following C program.
+\lstset{language=C,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries,
+    showstringspaces=false,
+    morekeywords={include, printf}
+}
+\begin{lstlisting}
+
+#include <stdio.h>
+int main()
+{
+    int i, j, count;
+    count = 0;
+    i = 0;
+    for(j=-3; j<=3; j++)
+    {
+        if((j>=0) && (i++))
+            count = count + j;
+    }
+    count = count + i;
+    printf("%d", count);
+    return 0;
+}
+
+\end{lstlisting}
+
+Which one of the following options are correct ? \vspace{0.1in}
+\begin{enumerate}
+\item The program will not compile successfully. 
+\item The program will compile successfully and output 10 when executed.
+\item The program will compile successfully and output 8 when executed.
+\item The program will compile successfully and output 13 when executed. 
+\end{enumerate}
+
+\section{Solution}
+Answer : Option 2
+
+\begin{itemize}
+    \item  Initially, i=0, count=0 and a for loop is running from j= -3 to j=3. If condition inside the for loop will execute when j>=0 and i is non zero.\\
+    So for j=-3, -2, -1, it will not go inside the if condition, as j is less than 0.
+    \item When j=0, initial value of i is also 0, so if condition will not satisfy, but i++ will increment the value of i after checking the if condition. so now i =1.
+    \item When j=1, the value of i is 1, so it will enter the if condition and the value of count will be 0+1 = 1, and i++ will increment the value of i after checking the if condition. so now i =2.
+    \item When j=2, the value of i is 2, so it will enter the if condition and the value of count will be 1+2 = 3, and i++ will increment the value of i after checking the if condition. so now i =3.
+     \item When j=3, the value of i is 3, so it will enter the if condition and the value of count will be 3+3 =6 , and i++ will increment the value of i after checking the if condition. so now i =4.
+    \item After running the for loop, the value of count variable is 6 and the value of i is 4.\\
+    So, count=count+i will be 6+4=10.\vspace{0.2in}\vspace{0.2in}
+    Hence, The program will compile successfully and output 10 when executed So the correct option is (2)
+\end{itemize}
+
+
+\end{document}
