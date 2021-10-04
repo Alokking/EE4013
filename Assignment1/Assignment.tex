@@ -185,10 +185,42 @@ Answer : Option 2
     \item When j=1, the value of i is 1, so it will enter the if condition and the value of count will be 0+1 = 1, and i++ will increment the value of i after checking the if condition. so now i =2.
     \item When j=2, the value of i is 2, so it will enter the if condition and the value of count will be 1+2 = 3, and i++ will increment the value of i after checking the if condition. so now i =3.
      \item When j=3, the value of i is 3, so it will enter the if condition and the value of count will be 3+3 =6 , and i++ will increment the value of i after checking the if condition. so now i =4.
-    \item After running the for loop, the value of count variable is 6 and the value of i is 4.\\
-    So, count=count+i will be 6+4=10.\vspace{0.2in}\vspace{0.2in}
-    Hence, The program will compile successfully and output 10 when executed So the correct option is (2)
+    \item After running the for loop, the value of count variable is 6 and the value of i is 4.\\ \vspace{0.1in}\vspace{0.1in}
+    So, count=count+i will be 6+4=10.\\ 
 \end{itemize}
+
+\chapter{\textbf{Explanation}}
+
+ Initially i=0, j=-3, count=0 \\
+ As j>=0 , i increases \\
+
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        int i & int j & count=count+j \\
+        \hline
+        0 & -3 & 0 \\
+        \hline
+        0 & -2 & 0 \\
+        \hline
+        0 & -1 & 0 \\
+        \hline
+        1 &  0 & 0 \\
+        \hline
+        2 &  1 & 1 \\
+        \hline
+        3 &  2 & 3 \\
+        \hline
+        4 &  3 & 6 \\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{}
+    \end{table}
+ After reaching j=3 the loop will break\\
+ We have count = 6 and i = 4 \\
+ Here the answer is count + i that is 6 + 4 = 10
 
 
 \end{document}
